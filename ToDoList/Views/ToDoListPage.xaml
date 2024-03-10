@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-x:Class="ToDoList.Views.ToDoListPage"
-Title="Todo">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoList.Views.ToDoListPage"
+             Title="To Do"
+             BackgroundColor="#E0FFFF">
+
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="+" Clicked="OnItemAdded">
             <ToolbarItem.IconImageSource>
@@ -13,14 +15,19 @@ Title="Todo">
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
-    <ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected">
+
+    <ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected" SeparatorVisibility="None">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                        <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />
-                    </StackLayout>
+                    <Frame Margin="5" Padding="5" BackgroundColor="Black" HasShadow="False" CornerRadius="5">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                                     BackgroundColor="Black" Padding="5">
+                            <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"
+                                   TextColor="DarkGreen" />
+                            <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />
+                        </StackLayout>
+                    </Frame>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
