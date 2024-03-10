@@ -20,11 +20,11 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <Frame Margin="5" Padding="5" BackgroundColor="Black" HasShadow="False" CornerRadius="5">
+                    <Frame Margin="5" Padding="5" BackgroundColor="CornflowerBlue" HasShadow="True" CornerRadius="8">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
-                                     BackgroundColor="Black" Padding="5">
+                                     BackgroundColor="LightBlue" Padding="0" >
                             <Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand"
-                                   TextColor="DarkGreen" />
+                                   TextColor="Black" />
                             <Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />
                         </StackLayout>
                     </Frame>

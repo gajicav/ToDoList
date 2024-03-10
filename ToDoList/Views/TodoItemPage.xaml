@@ -2,20 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 x:Class="ToDoList.Views.TodoItemPage"
-Title="{Binding Name}">
+Title="{Binding Name}"
+BackgroundColor="LightSeaGreen">
     <StackLayout Margin="20"
 VerticalOptions="StartAndExpand">
+        <BoxView HeightRequest="50" Color="Transparent" VerticalOptions="FillAndExpand" />
         <Label Text="Name" />
         <Entry Text="{Binding Name}" />
         <Label Text="Notes" />
         <Entry Text="{Binding Notes}" />
         <Label Text="Done" />
         <Switch IsToggled="{Binding Done}" />
-        <Button Text="Save"
-Clicked="OnSaveClicked" />
-        <Button Text="Delete"
-Clicked="OnDeleteClicked" />
-        <Button Text="Cancel"
-Clicked="OnCancelClicked" />
+        <BoxView HeightRequest="100" Color="Transparent" VerticalOptions="FillAndExpand" />
+        <Button Text="Save" Clicked="OnSaveClicked" BackgroundColor="LightGreen" BorderColor="Green" CornerRadius="30"/>
+        <Button Text="Delete" Clicked="OnDeleteClicked" BackgroundColor="IndianRed" BorderColor="Red" CornerRadius="30"/>
+        <Button Text="Cancel" Clicked="OnCancelClicked" BackgroundColor="LightBlue" BorderColor="Blue" CornerRadius="30"/>
     </StackLayout>
 </ContentPage>
